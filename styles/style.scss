@@ -51,19 +51,12 @@ nav {
   }
 }
 .nav-menu {
-  z-index: 100;
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 5rem;
-  top: 0;
-  right: 0;
-  padding: 3rem;
-  min-height: 100vh;
-  width: 60%;
-  background-color: $Off-white;
-  visibility: hidden;
+  visibility: collapse;
 }
 menu {
   display: flex;
@@ -73,6 +66,9 @@ menu {
     font-size: 1.8rem;
     color: $Very-dark-blue;
     text-decoration: none;
+    &:hover {
+      color: $orange;
+    }
   }
 }
 .menu-close {
@@ -83,35 +79,39 @@ menu {
 main {
   padding: 2rem;
 }
-.illustration {
-  padding-top: 4rem;
-}
-.container {
-  margin: 2rem 0;
-  display: flex;
-  gap: 2rem;
-
-  .cont-txt {
-    h3 {
-      font-size: 3rem;
-      color: $Grayish-blue;
-      font-family: "inter-bold";
-    }
-    h4 {
-      font-family: "inter-bold";
-      color: $Very-dark-blue;
-      font-size: 1.7rem;
-      padding: 1.2rem 0;
-    }
-    p {
-      line-height: 2.4rem;
-    }
+.hero-text {
+  margin-top: 2rem;
+  h1 {
+    font-size: 4rem;
+    font-family: "inter-extraBold";
+    color: $Very-dark-blue;
+  }
+  p {
+    line-height: 2.5rem;
+    padding: 2rem 0;
   }
 
-  .cont-img img {
-    width: 10rem;
+  button {
+    background-color: $red;
+    width: 55%;
+    cursor: pointer;
+    padding: 1.5rem;
+    border: none;
+    color: $Off-white;
+    font-family: "inter-bold";
+    letter-spacing: 0.4rem;
+    &:hover {
+      background-color: $Very-dark-blue;
+    }
   }
 }
+.hero-image img {
+  width: 100%;
+}
+.desktop {
+  display: none;
+}
+
 .intro {
   margin-top: 5rem;
   background-color: $Very-dark-blue;
@@ -126,32 +126,135 @@ main {
     font-size: 3rem;
     color: $orange;
   }
-  h3 {
+  h3 a {
+    color: $Off-white;
+    text-decoration: none;
     font-size: 2rem;
+
+    &:hover {
+      color: $orange;
+    }
   }
 }
-.hero-text {
-    margin-top: 2rem;
-  h1 {
-    font-size: 4rem;
-    font-family: "inter-extraBold";
-    color: $Very-dark-blue;
-  }
-  p {
-    line-height: 2.5rem;
-    padding: 2rem 0;
+.illustration {
+  padding-top: 4rem;
+}
+.container {
+  margin: 2rem 0;
+  display: flex;
+  gap: 2rem;
+
+  .cont-txt {
+    h4 {
+      margin: 1rem 0;
+    }
+    h3 a {
+      font-size: 3rem;
+      color: $Grayish-blue;
+      font-family: "inter-bold";
+    }
+    h4 a {
+      margin: 2rem 0;
+      text-decoration: none;
+      font-family: "inter-bold";
+      color: $Very-dark-blue;
+      font-size: 1.5rem;
+      padding: 1.2rem 0;
+      &:hover {
+        color: $red;
+      }
+    }
+    p {
+      line-height: 2.4rem;
+    }
   }
 
-  button {
-    background-color: $red;
-    width: 55%;
-    padding: 1.5rem;
-    border: none;
-    color: $Off-white;
-    font-family: "inter-bold";
-    letter-spacing: 0.4rem;
+  .cont-img img {
+    width: 10rem;
   }
 }
-.hero-image img {
-  width: 100%;
+
+.show {
+  visibility: visible;
+  z-index: 100;
+  min-height: 100vh;
+  width: 50%;
+  top: 0;
+  right: 0;
+  padding: 3rem;
+  background-color: $Off-white;
+}
+
+@media (min-width: 1024px) {
+  html,
+  body {
+    min-width: 1024px;
+  }
+  header,
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  nav {
+    padding: 0;
+    padding-top: 2rem;
+  }
+  .burger,
+  .menu-close,
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .nav-menu {
+    // z-index: 0;
+    min-height: inherit;
+    position: static;
+    visibility: visible;
+    background: none;
+  }
+  menu {
+    flex-direction: row;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 4;
+    grid-template-rows: 4;
+    gap: 2rem;
+  }
+
+  .hero-image {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .hero-text {
+    margin-top: 0;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    grid-row: 2/3;
+    grid-column: 1/3;
+    .grp {
+      flex: 2;
+    }
+    p {
+      padding-top: 0;
+    }
+    h1 {
+      font-size: 4.5rem;
+      flex: 1.5;
+    }
+  }
+  .intro {
+    margin-top: 0;
+    grid-row: 1/3;
+    grid-column: 3/4;
+  }
+  .illustration {
+    padding-top: 0rem;
+    display: flex;
+    grid-column: 1/4;
+  }
 }
