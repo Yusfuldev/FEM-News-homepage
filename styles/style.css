@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "inter-bold";
+  src: url(../assets/fonts/static/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: "inter-regular";
+  src: url(../assets/fonts/static/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: "inter-extraBold";
+  src: url(../assets/fonts/static/Inter-ExtraBold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+body {
+  color: #5d5f79;
+  overflow-x: hidden;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-family: "inter-regular", sans-serif;
+  background-color: #fffdfa;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+nav #logo {
+  width: 70%;
+}
+
+.nav-menu {
+  z-index: 100;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5rem;
+  top: 0;
+  right: 0;
+  padding: 3rem;
+  min-height: 100vh;
+  width: 60%;
+  background-color: #fffdfa;
+  visibility: hidden;
+}
+
+menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+menu a {
+  font-size: 1.8rem;
+  color: #00001a;
+  text-decoration: none;
+}
+
+.menu-close {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+main {
+  padding: 2rem;
+}
+
+.illustration {
+  padding-top: 4rem;
+}
+
+.container {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+.container .cont-txt h3 {
+  font-size: 3rem;
+  color: #c5c6ce;
+  font-family: "inter-bold";
+}
+
+.container .cont-txt h4 {
+  font-family: "inter-bold";
+  color: #00001a;
+  font-size: 1.7rem;
+  padding: 1.2rem 0;
+}
+
+.container .cont-txt p {
+  line-height: 2.4rem;
+}
+
+.container .cont-img img {
+  width: 10rem;
+}
+
+.intro {
+  margin-top: 5rem;
+  background-color: #00001a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+  color: #fffdfa;
+  padding: 2rem;
+  line-height: 3rem;
+}
+
+.intro h2 {
+  font-size: 3rem;
+  color: #e9ab53;
+}
+
+.intro h3 {
+  font-size: 2rem;
+}
+
+.hero-text {
+  margin-top: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-family: "inter-extraBold";
+  color: #00001a;
+}
+
+.hero-text p {
+  line-height: 2.5rem;
+  padding: 2rem 0;
+}
+
+.hero-text button {
+  background-color: #f15e50;
+  width: 55%;
+  padding: 1.5rem;
+  border: none;
+  color: #fffdfa;
+  font-family: "inter-bold";
+  letter-spacing: 0.4rem;
+}
+
+.hero-image img {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
