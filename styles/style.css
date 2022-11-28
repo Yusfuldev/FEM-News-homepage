@@ -150,6 +150,10 @@ main {
   line-height: 3rem;
 }
 
+.intro .border {
+  border-bottom: 1px solid #fffdfa;
+}
+
 .intro h2 {
   font-size: 3rem;
   color: #e9ab53;

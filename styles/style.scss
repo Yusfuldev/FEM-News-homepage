@@ -39,7 +39,6 @@ body {
 }
 
 // Header
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -121,7 +120,9 @@ main {
   color: $Off-white;
   padding: 2rem;
   line-height: 3rem;
-
+  .border {
+    border-bottom: 1px solid $Off-white;
+  }
   h2 {
     font-size: 3rem;
     color: $orange;
